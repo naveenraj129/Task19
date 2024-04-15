@@ -1,0 +1,48 @@
+package base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Guvitask19 {
+
+    public static void main(String[] args){
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.guvi.in/register");
+        driver.manage().window().maximize();
+
+        //Listed all possible locators for Guvisignup page
+
+        // Name field
+        driver.findElement(By.xpath("//input[@id = 'name']"));
+        driver.findElement(By.xpath("//input[@class= 'form-control']"));
+        driver.findElement(By.cssSelector("#name"));
+
+        //email address
+
+        driver.findElement(By.xpath("//input[@id = 'email']"));
+        driver.findElement(By.xpath("//input[@type = 'email']"));
+        driver.findElement(By.xpath("//input[@class = 'form-control']"));
+        driver.findElement(By.cssSelector("#email"));
+
+        //password
+
+        driver.findElement(By.xpath("//input[@type = 'password']"));
+        driver.findElement(By.xpath("//input[@class = 'form-control password-err']"));
+        driver.findElement(By.xpath("//input[@id = 'password']"));
+        driver.findElement(By.cssSelector("#password"));
+
+        //password
+        driver.findElement(By.xpath("//input[@class = 'form-control countrycode-left']"));
+        driver.findElement(By.xpath("//input[@id = 'mobileNumber']"));
+        driver.findElement(By.cssSelector("#mobileNumber"));
+
+        //signup button
+
+        driver.findElement(By.xpath("//a[@id='signup-btn']"));
+        driver.findElement(By.xpath("//a[@class='btn signup-btn']"));
+        driver.findElement(By.cssSelector("#signup-btn"));
+
+    }
+}
